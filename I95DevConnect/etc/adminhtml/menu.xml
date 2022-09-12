@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Webkul_Grid Menu
+ *
+ * @category    Webkul
+ * @package     Webkul_Grid
+ * @author      Webkul Software Private Limited
+ *
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="MultiUom_I95DevConnect::manager" title="MyMultiUom" module="MultiUom_I95DevConnect" sortOrder="10" resource="MultiUom_I95DevConnect::manager"/>
+        <add id="MultiUom_I95DevConnect::add_row" title="MyMultiUom" module="MultiUom_I95DevConnect" sortOrder="20" parent="MultiUom_I95DevConnect::manager" action="uom/uom" resource="Webkul_Grid::add_row"/>
+    </menu>
+</config>

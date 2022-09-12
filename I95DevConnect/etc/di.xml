@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+
+<!--
+/** Grid di xml
+ * @category  Webkul
+ * @package   Webkul_Grid
+ * @author    Webkul
+ * @copyright Copyright (c) 2010-2017 Webkul Software Private Limited (https://webkul.com)
+ * @license   https://store.webkul.com/license.html
+ */
+-->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+  
+    <preference for="MultiUom\I95DevConnect\Api\Data\UomInterface" type="MultiUom\I95DevConnect\Model\Uom" />
+
+    <preference for="MultiUom\I95DevConnect\Api\UomtApiManagementInterface" type="MultiUom\I95DevConnect\Model\Api\UomApiManagement" />
+
+
+
+<preference for="MultiUom\I95DevConnect\Api\UomPostInterface" type="Mageants\Blog\Model\UomPost"/>
+
+    <virtualType name="MultiUom\I95DevConnect\Model\ResourceModel\Uom\Uom\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+       
+        <arguments>
+         
+            <argument name="mainTable" xsi:type="string">multiuom_i95devconnect_table</argument>
+         
+            <argument name="resourceModel" xsi:type="string">MultiUom\I95DevConnect\Model\ResourceModel\Uom</argument>
+      
+      
+        </arguments>
+   
+    </virtualType>
+   
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="uom_record_uom_list_data_source" xsi:type="string">MultiUom\I95DevConnect\Model\ResourceModel\Uom\Uom\Collection</item>
+            </argument>
+        </arguments>
+   
+
+    </type>
+
+</config>
